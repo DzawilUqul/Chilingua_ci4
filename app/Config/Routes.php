@@ -29,7 +29,25 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
+//==== Home Routes ====
 $routes->get('/', 'HomeController::index');
+$routes->get('/courses', 'HomeController::courses');
+$routes->get('/superQuiz', 'HomeController::superQuiz');
+$routes->get('/about', 'HomeController::about');
+$routes->get('/login', 'HomeController::login');
+
+// ==== Courses Routes ====
+$routes->get('courses/kosakata', 'CoursesController::kosakata');
+$routes->get('courses/tatabahasa', 'CoursesController::tatabahasa');
+$routes->get('courses/pengucapan', 'CoursesController::pengucapan');
+
+// ==== Kosakata Routes ====
+$routes->get('courses/kosakata/HSK1_1', 'KosakataController::hsk1');
+$routes->get('courses/kosakata/HSK2_1', 'KosakataController::hsk2');
+$routes->get('courses/kosakata/HSK3_1', 'KosakataController::hsk3');
+
+
 
 /*
  * --------------------------------------------------------------------
