@@ -28,4 +28,14 @@ class HomeController extends BaseController
     {
         return view('login');
     }
+
+    public function registration()
+    {
+        return view('registration');
+    }
+
+    public function superQuizListening()
+    {
+        return view('superQuizListening');
+    }
 }

@@ -1,31 +1,21 @@
+<?= $this->extend('components/layout') ?>
+
+<?= $this->section('title') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/css/kosakataHSK1_2.css"); ?>">
+    <meta charset="utf-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kosakata</title>
-    <link rel="stylesheet" href="kosakataHSK1_2.css">
+    <title>Chilingua</title>
 </head>
 <body>
-    <header>
-        <p id="EzChineseP">
-            <a id="EzChineseImgHref" href="index.html">
-                <object align="center" width="140px" height="110px" data="Pictures/Billy In Hat.png"></object>
-            </a>    Ez Chinese
-        </p>
-        
-        <p id="navBar">
-            <a class="navbarPaddingLeft" href="index.html">Home        </a>
-            <a class="navbarPaddingLeft" href="courses.html">Courses       </a>
-            <a class="navbarPaddingLeft" href="superQuiz.html">Super Quiz       </a>
-            <a class="navbarPaddingLeft" href="tentang.html">About         </a>
-            <a class="navbarPaddingRightLeft" href="registration.html">Login</a>
-        </p>
-    </header>
+
+<?= $this->section('content') ?>
 
     <!-- ===== Body ===== -->
-    <a href="kosakata.html" class=" fontBlack"> <button class="pilihHSK"> <span class="pilihHSKA">Pilih HSK</span> </button>  </a>
+    <a href="<?php echo base_url("courses/kosakata/"); ?>" class=" fontBlack"> <button class="pilihHSK"> <span class="pilihHSKA">Pilih HSK</span> </button>  </a>
     <div class="headerPadding"></div>
 
 <p class="fontBlack" id="daftarKosakata">Daftar Kosakata NEW HSK 1 Part 2</p>
@@ -138,24 +128,16 @@
 
 <p class="fontGrey" id="halamanSelanjutnya">Halaman 2 Dari 5 Halaman</p>
 <div class="pagination">
-    <a id="fontGreyPagination" href="kosakataHSK1_1.html">&laquo;</a>
-    <a id="fontGreyPagination" href="kosakataHSK1_1.html">1</a>
+    <a id="fontGreyPagination" href="<?php echo base_url("courses/kosakata/HSK1_1"); ?>">&laquo;</a>
+    <a id="fontGreyPagination" href="<?php echo base_url("courses/kosakata/HSK1_1"); ?>">1</a>
     <a id="fontGreyPagination" class="active" href="#" onclick="return false">2</a>
-    <a id="fontGreyPagination" href="kosakataHSK1_3.html">3</a>
-    <a id="fontGreyPagination" href="kosakataHSK1_4.html">4</a>
-    <a id="fontGreyPagination" href="kosakataHSK1_5.html">5</a>
-    <a id="fontGreyPagination" href="kosakataHSK1_3.html">&raquo;</a>
+    <a id="fontGreyPagination" href="<?php echo base_url("courses/kosakata/HSK1_3"); ?>">3</a>
+    <a id="fontGreyPagination" href="<?php echo base_url("courses/kosakata/HSK1_4"); ?>">4</a>
+    <a id="fontGreyPagination" href="<?php echo base_url("courses/kosakata/HSK1_5"); ?>">5</a>
+    <a id="fontGreyPagination" href="<?php echo base_url("courses/kosakata/HSK1_3"); ?>">&raquo;</a>
   </div>
 
 
-<footer>
-    <address>
-        <p class="footerP"> <object class="footerIcon" align = "center" data ="Icons/icons8-copyright-all-rights-reserved-24.png" width="20px" height="20px" alt=""> </object> 2022 Ez Chinese</p>
-        <p class="footerP"> <object class="footerIcon" align = "center" data ="Icons/icons8-phone-50 (1).png" width="20px" height="20px" alt=""></object> Phone : 08123456789</p>
-        <p class="footerP"> <object class="footerIcon" align = "center" data ="Icons/icons8-mail-50.png"      width="20px" height="20px" alt=""></object> E-mail : ezchinese@gmail.com</p>
-        <p class="footerP"> <object class="footerIcon" align = "center" data ="Icons/icons8-instagram-24.png" width="20px" height="20px" alt=""></object> Instagram : @ezchinese</p>
-        <p class="footerP"> <object class="footerIcon" align = "center" data ="Icons/icons8-internet-30.png"  width="20px" height="20px" alt=""></object> EzChinese.com Jepara Tech Ltd. </p>
-    </address>
-</footer>
-</body>
-</html>
+
+  <?= $this->endSection() ?>
+<?= $this->endSection() ?>

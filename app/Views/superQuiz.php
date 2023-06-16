@@ -1,5 +1,17 @@
 <?= $this->extend('components/layout') ?>
 
+<?= $this->section('title') ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/css/superQuiz.css"); ?>">
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chilingua</title>
+</head>
+<body>
+
 <?= $this->section('content') ?>
 
 <!-- Body -->
@@ -8,7 +20,7 @@
         <p id="landingP" class="fontBlack">Selamat Datang di Super Quiz</p>
         <p id="landingP2" class="fontGrey">Latihan Soal Berdasarkan Ujian Asli</p>
         <button class="startButton fontBlack" onclick="startFunc()">Start</button>
-        <img id="background" src="Pictures/Tata Bahasa Background.jpg" alt="">
+        <?= img(['src' => 'assets/images/Tata Bahasa Background.jpg', 'id' => 'background', 'alt' => '']) ?>
     </div>
     <div class="sideBar hilangDiv">
             <div class="dropdown">
@@ -157,4 +169,5 @@
         </div>
     </div>
 
+    <?= $this->endSection() ?>
 <?= $this->endSection() ?>

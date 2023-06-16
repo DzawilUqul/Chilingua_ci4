@@ -16,7 +16,7 @@
 
     <!-- ===== Body ===== -->
     
-        <a href="kosakata.html" class=" fontBlack"> <button class="pilihHSK"> <span class="pilihHSKA">Pilih HSK</span> </button>  </a>
+        <a href="<?php echo base_url("courses/kosakata/"); ?>" class=" fontBlack"> <button class="pilihHSK"> <span class="pilihHSKA">Pilih HSK</span> </button>  </a>
     
     <div class="headerPadding"></div>
     
@@ -131,11 +131,11 @@
 <div class="pagination">
     <a id="fontGreyPagination" href="#" onclick="return false">&laquo;</a>
     <a id="fontGreyPagination" class="active" href="#" onclick="return false">1</a>
-    <a id="fontGreyPagination" href="kosakataHSK1_2.html">2</a>
-    <a id="fontGreyPagination" href="kosakataHSK1_3.html">3</a>
-    <a id="fontGreyPagination" href="kosakataHSK1_4.html">4</a>
-    <a id="fontGreyPagination" href="kosakataHSK1_5.html">5</a>
-    <a id="fontGreyPagination" href="kosakataHSK1_2.html">&raquo;</a>
+    <a id="fontGreyPagination" href="<?php echo base_url("courses/kosakata/HSK1_2"); ?>">2</a>
+    <a id="fontGreyPagination" href="<?php echo base_url("courses/kosakata/HSK1_3"); ?>">3</a>
+    <a id="fontGreyPagination" href="<?php echo base_url("courses/kosakata/HSK1_4"); ?>">4</a>
+    <a id="fontGreyPagination" href="<?php echo base_url("courses/kosakata/HSK1_5"); ?>">5</a>
+    <a id="fontGreyPagination" href="<?php echo base_url("courses/kosakata/HSK1_2"); ?>">&raquo;</a>
   </div>
 
 

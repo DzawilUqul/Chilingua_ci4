@@ -34,8 +34,10 @@ $routes->set404Override();
 $routes->get('/', 'HomeController::index');
 $routes->get('/courses', 'HomeController::courses');
 $routes->get('/superQuiz', 'HomeController::superQuiz');
+$routes->get('/superQuizListening', 'HomeController::superQuizListening');
 $routes->get('/about', 'HomeController::about');
 $routes->get('/login', 'HomeController::login');
+$routes->get('/registration', 'HomeController::registration');
 
 // ==== Courses Routes ====
 $routes->get('courses/kosakata', 'CoursesController::kosakata');
@@ -43,10 +45,10 @@ $routes->get('courses/tatabahasa', 'CoursesController::tatabahasa');
 $routes->get('courses/pengucapan', 'CoursesController::pengucapan');
 
 // ==== Kosakata Routes ====
-$routes->get('courses/kosakata/HSK1_1', 'KosakataController::hsk1');
-$routes->get('courses/kosakata/HSK2_1', 'KosakataController::hsk2');
-$routes->get('courses/kosakata/HSK3_1', 'KosakataController::hsk3');
+$routes->get('courses/kosakata/(:segment)', 'KosakataController::hsk1/$1');
 
+// ==== Tata Bahasa Routes ====
+$routes->get('courses/tatabahasa/(:segment)', 'TataBahasaController::tatabahasa/$1');
 
 
 /*
