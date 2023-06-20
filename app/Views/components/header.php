@@ -5,8 +5,6 @@
             <span style="margin-left: 10px; text-decoration: none; color: white;">Chilingua</span>
         </a>
     </p>
-
-        
         <p id="navBar">
             <a class="navbarPaddingLeft" href="<?= base_url('/') ?>">Home       </a>
             <a class="navbarPaddingLeft" href="<?= base_url('/courses//') ?>">Courses       </a>

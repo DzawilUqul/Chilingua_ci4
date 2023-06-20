@@ -39,19 +39,8 @@
     </div>
 
     <!-- Show Questions -->
-    <!-- <button onclick="popup()" >cek</button> -->
-    <div class="popup hilangDiv">
-        <button onclick="close1()" class="cross" >asd</button>
-        <form action="">
-            <input type="text">
-        </form>
-    </div>
-    
-
     
     <span class="p hilangDiv" id="pi">1</span><span></span>
-
-    
 
     <div class="container hilangDiv" id="containerCopy">
         <p class="containerP hilangDiv fontBlack">HSK 1 Reading   </p>

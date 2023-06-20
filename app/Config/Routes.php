@@ -51,6 +51,11 @@ $routes->get('courses/kosakata/(:segment)', 'KosakataController::hsk1/$1');
 $routes->get('courses/tatabahasa/(:segment)', 'TataBahasaController::tatabahasa/$1');
 
 
+$routes->get('/cek', 'SuperQuizController::index');
+$routes->get('/cek/(:any)', 'SuperQuizController::ViewQue/$1');
+$routes->post('/cek/(:any)', 'SuperQuizController::EditCatatan/$1');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

@@ -1,5 +1,4 @@
 <!-- Footer -->
-
 <footer>
         <address>
             <p class="footerP" > <?php echo img(['class' => 'footerIcon', 'align' => 'center', 'src' => 'assets/images/Icons/icons8-copyright-all-rights-reserved-24.png', 'width' => '20px', 'height' => '20px', 'alt' => '']); ?>
