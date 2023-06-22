@@ -84,10 +84,6 @@
 </nav>
 
 
-
-
-<?php helper('form') ?>
-<?= form_open("/cek") ?>
 <?php foreach($ques as $que) : ?>
   
 
@@ -156,14 +152,10 @@
 
     <div><br><br><br></div>
 
-    <input type="hidden" name="id[]" value="<?= $que['id']; ?>">
-    
-
 <?php endforeach ?>
 
         
 <input type="submit" value="Lihat Hasil">
-  <?= form_close() ?>
 
 
     <script type="text/JavaScript">

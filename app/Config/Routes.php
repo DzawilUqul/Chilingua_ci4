@@ -54,6 +54,9 @@ $routes->get('courses/tatabahasa/(:segment)', 'TataBahasaController::tatabahasa/
 $routes->get('/cek', 'SuperQuizController::index');
 $routes->get('/cek/(:any)', 'SuperQuizController::ViewQue/$1');
 $routes->post('/cek/(:any)', 'SuperQuizController::EditCatatan/$1');
+$routes->post('/cek', 'SuperQuizController::EditCatatan');
+
+$routes->get('/MyExercises', 'MyExercises::index');
 
 
 /*

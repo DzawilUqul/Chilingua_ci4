@@ -83,7 +83,7 @@ img{
     width: 400px;
     height: 30px;
     margin-bottom: 10px;
-    margin-left: 5%;
+    margin-left: 2%;
     padding-top: 10px;
     padding-bottom: 8px;
     display: inline-block;
@@ -119,15 +119,46 @@ span.hiddenP{
     background-color: white;
     border-radius: 10px 10px 10px 10px ;
     margin-top: 50px;
-    margin-left: 60px;
-    margin-right: 300px;
-    padding-bottom: 0px;
-
+    margin-left: 5%;
+    margin-right: 23%;
+    padding-bottom: 60px;
 }
 
 
 .onHover :hover{
     background-color: rgb(178, 218, 253);
+}
+
+.optionSelected{
+    background-color: rgb(102, 163, 220) !important;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+input[type="radio"]:checked + label{
+    background-color: rgb(102, 163, 220) !important;
+    color: white !important;
+}
+
+label:hover{
+    background-color: rgb(178, 218, 253);
+}
+
+label
+{
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(225,241,255);
+    cursor: pointer;
+    width: 400px;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-left: 4%;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    display: inline-block;
 }
 
 footer{
@@ -155,14 +186,15 @@ footer{
     color: white;
 }
 
-#simpanHover:hover{
-    background-color: rgb(203, 209, 213);
+.simpanHover:hover{
+    background-color: rgb(51, 139, 220) !important;
 }
 
 .option:hover
 {
     background-color: rgb(178, 218, 253);
 }
+
 
 #nextHover:hover{
     background-color: rgb(51, 139, 220);

@@ -24,19 +24,28 @@ class SuperQuizController extends BaseController
     {
         $data['ques'] = $this->quesMdl->where('id', $id)->findAll();
 
+        if( $id != '1')
+        {
+            echo"<script type='text/JavaScript'>
+            prevButton.classList.remove('disabled');
+            prevButton.classList.remove('opacity');
+            </script>";
+        }
+
         return view('superQuizCek', $data);
     }
 
-    public function editCatatan($id)
+    public function editCatatan()
     {
-        
-        $result = $this->quesMdl->EditCatatan($this->request->getPost());
-        if($result)
+        $data = $this->request->getPost();
+        $options = array($data['option1'],$data['option2']);
+
+        $result = $this->quesMdl->EditValue($data, $options);
+        if ($result) {
+            return view('MyExercises');
+        } else
         {
-            return redirect()->to('/cek//'.$id);
-        } else 
-        {
-            return redirect()->to('/');
+            echo "error";
         }
     }
 }
