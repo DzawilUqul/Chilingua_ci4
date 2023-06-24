@@ -13,6 +13,7 @@ class SuperQuizController extends BaseController
     {
         $this->quesMdl = new SuperQuizReadingModel();
     }
+    
     public function index()
     {
         $data['ques'] = $this->quesMdl->findAll();
@@ -20,29 +21,14 @@ class SuperQuizController extends BaseController
         return view('superQuizCek',$data);
     }
 
-    public function ViewQue($id)
-    {
-        $data['ques'] = $this->quesMdl->where('id', $id)->findAll();
-
-        if( $id != '1')
-        {
-            echo"<script type='text/JavaScript'>
-            prevButton.classList.remove('disabled');
-            prevButton.classList.remove('opacity');
-            </script>";
-        }
-
-        return view('superQuizCek', $data);
-    }
-
     public function editCatatan()
     {
         $data = $this->request->getPost();
-        $options = array($data['option1'],$data['option2']);
+        $options = array($data['option1'],$data['option2'],$data['option3'],$data['option4'],$data['option4']);
 
         $result = $this->quesMdl->EditValue($data, $options);
         if ($result) {
-            return view('MyExercises');
+            return redirect()->to('/MyExercises');
         } else
         {
             echo "error";

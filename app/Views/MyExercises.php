@@ -135,16 +135,29 @@
         </div>
 
         <div>
-          <input type="radio" value="benar" name="option<?= $que['id']; ?>[]" id="benar<?= $que['id']; ?>">
-          <label for="benar<?= $que['id']; ?>" class="fontGrey">Benar</label>
+          <?php if($que['user_answer'] == 'benar' && $que['que_answer'] == 'benar'){ ?>
+            <div class="option fontGrey checkListTrue disabled" id="optionSelected" onmousedown="OptionSelected()"><span>Benar</span></div>
+            <div class="option fontGrey disabled" id="optionSelected" onmousedown="OptionSelected2()" id="padding"><span>Salah</span></div>
+          <?php } ?>
+          
+          <?php if($que['user_answer'] == 'salah' && $que['que_answer'] == 'benar'){ ?>
+            <div class="option fontGrey checkListTrue disabled" id="optionSelected" onmousedown="OptionSelected()"><span>Benar</span></div>
+            <div class="option fontGrey checkListFalse disabled" id="optionSelected" onmousedown="OptionSelected2()" id="padding"><span>Salah</span></div>
+          <?php } ?>
 
-          <input type="radio" value="salah" name="option<?= $que['id']; ?>[]" id="salah<?= $que['id']; ?>">
-          <label for="salah<?= $que['id']; ?>" class="fontGrey">Salah</label>
+          <?php if($que['user_answer'] == 'benar' && $que['que_answer'] == 'salah'){ ?>
+            <div class="option fontGrey checkListFalse disabled" id="optionSelected" onmousedown="OptionSelected()"><span>Benar</span></div>
+            <div class="option fontGrey checkListTrue disabled" id="optionSelected" onmousedown="OptionSelected2()" id="padding"><span>Salah</span></div>
+          <?php } ?>
+
+          <?php if($que['user_answer'] == 'salah' && $que['que_answer'] == 'salah'){ ?>
+            <div class="option fontGrey disabled" id="optionSelected " onmousedown="OptionSelected()"><span>Benar</span></div>
+            <div class="option fontGrey checkListTrue disabled" id="optionSelected" onmousedown="OptionSelected2()" id="padding"><span>Salah</span></div>
+          <?php } ?>
+
         </div>
 
 
-        <!-- <div class="option fontGrey" id="optionSelected" onmousedown="OptionSelected()"><span>Benar</span></div>
-        <div class="option fontGrey" id="optionSelected" onmousedown="OptionSelected2()" id="padding"><span>Salah</span></div> -->
 
 
         <div id="dragDivId" class="dragDiv"></div>
@@ -153,9 +166,6 @@
     <div><br><br><br></div>
 
 <?php endforeach ?>
-
-        
-<input type="submit" value="Lihat Hasil">
 
 
     <script type="text/JavaScript">

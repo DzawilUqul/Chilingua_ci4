@@ -139,7 +139,7 @@
         </div>
 
         <div>
-          <input type="radio" value="benar" name="option<?= $que['id']; ?>[]" id="benar<?= $que['id']; ?>">
+          <input type="radio" value="benar" name="option<?= $que['id']; ?>[]" id="benar<?= $que['id']; ?>" required>
           <label for="benar<?= $que['id']; ?>" class="fontGrey">Benar</label>
 
           <input type="radio" value="salah" name="option<?= $que['id']; ?>[]" id="salah<?= $que['id']; ?>">
